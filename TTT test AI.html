@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html><head><title>Tic Tac Toe</title>
+<link rel="stylesheet" href="style/style.css">
+<meta name="viewport" content="width= device-width, initial-scale=1.0">
+</head><body>
+<div class="menuM">
+<div class="title">Tic Tac Toe</div>
+<button class="startG" onclick="startG()">Start</button>
+<button class="setG" onclick="openS()">Settings</button>
+<img src="icon/about.svg" class="aboutMB" onclick="openAbt()"/>
+<img src="icon/avatar.svg" class="avatarMB" onclick="opAvt()"/>
+</div>
+<div class="gameM">
+<div class="cont">
+<div class="message"></div>
+<div class="flex-ali">
+<div class="myTab">
+<div class="row">
+<div class="tdata" style="border-top:0;border-left:0;"></div>
+<div class="tdata" style="border-top:0;"></div>
+<div class="tdata" style="border-top:0;border-right:0;"></div></div>
+<div class="row">
+<div class="tdata" style="border-left:0;"></div>
+<div class="tdata"></div>
+<div class="tdata" style="border-right:0;"></div></div>
+<div class="row">
+<div class="tdata" style="border-bottom:0;border-left:0;"></div>
+<div class="tdata" style="border-bottom:0;"></div>
+<div class="tdata" style="border-bottom:0;border-right:0;"></div></div></div></div>
+<div class="icon">
+<img src="icon/home.png" style="postion:absolute;left:5%;" class="home" onclick="goHome()" />
+<img src="icon/restart.png" style="postion:absolute;right:5%;" class="restart" onclick="re()"/></div></div>
+<div class="board">
+<div class="XO" id="X">X</div>
+<div class="XO" id="O">O</div></div>
+<img src="icon/pause.png" class="pause" onclick="openP()"></img>
+<table id="table">
+<tr>
+<td style="border-top:0;border-left:0;"></td>
+<td style="border-top:0;"></td>
+<td style="border-top:0;border-right:0;"></td>
+</tr>
+<tr>
+<td style="border-left:0;"></td>
+<td></td>
+<td style="border-right:0;"></td>
+</tr>
+<tr>
+<td style="border-bottom:0;border-left:0;" ></td>
+<td style="border-bottom:0;"></td>
+<td style="border-bottom:0;border-right:0;"></td>
+</tr>
+</table>
+<div class="bgBlack"></div>
+<div class="optionP" id="pauseM">
+<div class="title">Paused</div>
+<div class="icon">
+<img src="icon/home.png" class="home" onclick="goHome()"/>
+<img src="icon/restart.png" class="restart" onclick="reAll()"/>
+<img src="icon/resume.png" class="options" onclick="resumeG()"/>
+</div></div></div>
+<div class="option">
+<div class="optionsB"></div>
+<div class="optionM">
+<div class="title">Options</div>
+<div class="sound">
+<label class="snd">Sound</label>
+<label class="switch">
+<input type="checkbox" checked="true">
+<span class="slider round"></span>
+</label></div>
+<div class="sound" style="top:50%">
+<label class="snd">Touch Sound</label>
+<label class="switch">
+<input type="checkbox">
+<span class="slider round"></span>
+</label></div>
+<div class="sound" style="top:65%">
+<label class="snd">Clear Data</label>
+<label class="clearD" onclick="clearD()">Clear</label>
+</div><button class="close">Close</div></div>
+<div class="avatarM">
+<button class="exitA" onclick="extA()">Close</button>
+<div class="main"><div class="conI"><img src="icon/avatar.svg" class="iA"></div><div class="name">Player</div></div>
+<div class="txtB">
+<div class="label">Name</div>
+<input type="text" id="name">
+<button class="sub" onclick="pro()">Proceed</button>
+<button class="cnl" onclick="closeN()">Cancel</button>
+</div>
+<div class="stats">
+<div class="tt">Stats</div><br>
+<div class="i">Player:<div class="ival"></div></div><br>
+<div class="i">Wins:<div class="iwin"></div></div><br>
+<div class="i">Loses:<div class="ilose"></div></div><br>
+<div class="i">Draws:<div class="idraw"></div></div><br>
+<div class="i">Ratio:<div class="iratio"></div></div>
+</div>
+</div>
+<div class="about">
+<div class="mainCont">
+<div class="txtA">This is a web application made by FBN776. This is a prototype work of a tic tac toe AI. It's not perfect. Sorry for Any inconvenience</div>
+<br>
+<div class="txtM">Made By : FBN776</div><br>
+<u class="txtM">Credits</u><br>
+<div class="txtM">Sounds : https://www.zapsplat.com</div><br>
+<div class="txtM">Icons: https://www.flaticon.com</div><br>
+<div class="txtM">Font : Apex Mk3-Medium</div><br>
+<div class="txtM">Code : FBN776</div><br>
+<img src="icon/logo.jpg" class="logo">
+<button class="closeAb" onclick="closeAb()">Close</button>
+</div>
+</div>
+
+<script src="js/library.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/draw.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
